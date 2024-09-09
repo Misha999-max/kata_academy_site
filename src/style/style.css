@@ -1,0 +1,70 @@
+@font-face {
+	font-family: 'TTLakes';
+	src: url('../fonts/TTLakes/TTLakes-Regular.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* mobile first top menu */
+.menu__left {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 10px;
+}
+
+.menu__left--icon > img {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.menu__right {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+.menu__right--divider {
+	width: 2px;
+	height: 32px;
+	background-color: #eaeaea;
+}
+
+.menu__right--tablet {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu__right--tablet > img {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.menu__right--search > img {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+	.menu__right--tablet {
+		display: none;
+	}
+}
+
+/* end mobile first top menu */
+
+/* start style main content */
+.services {
+	font-family: 'TTLakes';
+	padding: 20px 10px;
+	background-color: #f8f8f8;
+}
+/* end  style main content*/
