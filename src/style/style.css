@@ -190,7 +190,7 @@ a {
 	}
 
 	.services__description--img img {
-		width: 150%;
+		width: 100%;
 		flex-basis: 2;
 	}
 
