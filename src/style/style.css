@@ -4,11 +4,22 @@
 	font-style: normal;
 	font-weight: normal;
 }
+body {
+	overflow-x: hidden;
+}
 
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+}
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
 /* mobile first top menu */
@@ -66,5 +77,160 @@
 	font-family: 'TTLakes';
 	padding: 20px 10px;
 	background-color: #f8f8f8;
+}
+
+.services__top--info {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.services__top--info-title {
+	position: relative;
+	margin-left: 20px;
+	font-size: 28px;
+	line-height: 40px;
+}
+
+.services__top--info-title::before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 2px;
+	height: 34px;
+	background-color: #41f6d7;
+	left: -20px;
+	top: 0;
+}
+
+.services__top--info,
+.services__top--info-wrrap,
+.services__top--info-order-on {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.services__top--info-order-on > span {
+	display: inline-block;
+}
+.services__top--info-order-on > img {
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.services__top--info-descktop {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.services__top--nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow-x: scroll;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.services__top--nav-list {
+	max-width: max-content;
+	margin-left: 20px;
+}
+.services__top--nav-list a {
+	white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.services__description {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+	align-items: center;
+}
+
+.services__description--text {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.services__description--text-item2 {
+	display: block;
+	margin-top: 15px;
+}
+
+.services__description--text a {
+	display: block;
+	position: relative;
+	margin-left: 22px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.services__description--text a::before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 4px;
+	left: -20px;
+	width: 8px;
+	height: 10px;
+	background-image: url('../img/arrowDown.svg');
+}
+
+.services__description--img img {
+	width: 320px;
+	height: auto;
+}
+
+@media (max-width: 768px) {
+	.menu {
+		display: block;
+	}
+	.services__description {
+		flex-direction: column;
+	}
+
+	.services__description--img img {
+		width: 100%;
+		flex-basis: 2;
+	}
+
+	.services__description--text-item2 {
+		display: block;
+		height: 45px;
+		overflow: hidden;
+	}
+}
+
+@media (max-width: 780) {
+	.services__description--text-item2 {
+		display: none;
+		height: 45px;
+		overflow: hidden;
+	}
+
+	@media (min-width: 1000px) {
+		.services__description--text-item2 {
+			height: auto;
+			overflow: auto;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.services__top--info-wrrap {
+		display: none;
+	}
+}
+@media (min-width: 1000px) {
+	.menu {
+		display: none;
+	}
+	.services__top--info-wrrap {
+		display: flex;
+	}
+	.services__description--text {
+		margin-top: 40px;
+		max-width: 550px;
+	}
 }
 /* end  style main content*/
