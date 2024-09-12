@@ -20,8 +20,11 @@ ul {
 a {
 	text-decoration: none;
 	color: inherit;
+	transition: all 0.3s ease;
 }
-
+a:hover {
+	opacity: 0.6;
+}
 /* mobile first top menu */
 .menu__left {
 	display: flex;
@@ -41,7 +44,12 @@ a {
 	align-items: center;
 	gap: 20px;
 }
-
+.menu__right img {
+	transition: all 0.3s ease;
+}
+.menu__right img:hover {
+	transform: scale(1.1);
+}
 .menu__right--divider {
 	width: 2px;
 	height: 32px;
@@ -108,13 +116,18 @@ a {
 	justify-content: space-between;
 	align-items: center;
 }
-.services__top--info-order-on > span {
+.services__top--info-order-on > a {
 	display: inline-block;
 }
 .services__top--info-order-on > img {
 	display: inline-block;
 	margin-left: 20px;
 	margin-right: 20px;
+	transition: all 0.3s ease;
+}
+
+.services__top--info-order-on img:hover {
+	transform: scale(1.1);
 }
 .services__top--info-descktop {
 	display: flex;
@@ -142,7 +155,8 @@ a {
 .services__description {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 30px;
+	gap: 30px;
+	margin-top: 20px;
 	align-items: center;
 }
 
@@ -189,30 +203,10 @@ a {
 		flex-direction: column;
 	}
 
-	.services__description--img img {
-		width: 100%;
-		flex-basis: 2;
-	}
-
 	.services__description--text-item2 {
 		display: block;
 		height: 45px;
 		overflow: hidden;
-	}
-}
-
-@media (max-width: 780) {
-	.services__description--text-item2 {
-		display: none;
-		height: 45px;
-		overflow: hidden;
-	}
-
-	@media (min-width: 1000px) {
-		.services__description--text-item2 {
-			height: auto;
-			overflow: auto;
-		}
 	}
 }
 
@@ -221,16 +215,26 @@ a {
 		display: none;
 	}
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
 	.menu {
 		display: none;
+	}
+	.services__top--nav {
+		justify-content: flex-start;
+		flex-wrap: wrap;
 	}
 	.services__top--info-wrrap {
 		display: flex;
 	}
 	.services__description--text {
-		margin-top: 40px;
 		max-width: 550px;
+	}
+	.services__description--text-item2 {
+		height: auto;
+		overflow: auto;
+	}
+	.services__description--img img {
+		width: 100%;
 	}
 }
 /* end  style main content*/
