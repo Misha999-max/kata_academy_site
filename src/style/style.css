@@ -22,18 +22,23 @@ a {
 	color: inherit;
 	transition: all 0.3s ease;
 }
+button {
+	border: none;
+	outline: none;
+	background-color: inherit;
+}
 a:hover {
 	opacity: 0.6;
 }
 /* mobile first top menu */
-.menu__left {
+.menu {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding-top: 10px;
 }
 
-.menu__left--icon > img {
+.menu__left--icon button img {
 	display: inline-block;
 	margin-left: 10px;
 }
@@ -44,7 +49,7 @@ a:hover {
 	align-items: center;
 	gap: 20px;
 }
-.menu__right img {
+.menu__right button img {
 	transition: all 0.3s ease;
 }
 .menu__right img:hover {
@@ -62,12 +67,15 @@ a:hover {
 	align-items: center;
 }
 
-.menu__right--tablet > img {
+.menu__right--tablet button img {
 	display: inline-block;
 	margin-right: 20px;
 }
 
-.menu__right--search > img {
+.menu__right--search {
+	display: flex;
+}
+.menu__right--search button img {
 	display: inline-block;
 	margin-right: 10px;
 }
@@ -87,18 +95,18 @@ a:hover {
 	background-color: #f8f8f8;
 }
 
-.services__top--info {
+.services__top-info {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-.services__top--info-title {
+.services__top-info-title {
 	position: relative;
 	margin-left: 20px;
 	font-size: 28px;
 	line-height: 40px;
 }
 
-.services__top--info-title::before {
+.services__top-info-title::before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -109,33 +117,33 @@ a:hover {
 	top: 0;
 }
 
-.services__top--info,
-.services__top--info-wrrap,
-.services__top--info-order-on {
+.services__top-info,
+.services__top-info-wrrap,
+.services__top-info-order-on {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.services__top--info-order-on > a {
+.services__top-info-order-on > a {
 	display: inline-block;
 }
-.services__top--info-order-on > img {
+.services__top-info-order-on > img {
 	display: inline-block;
 	margin-left: 20px;
 	margin-right: 20px;
 	transition: all 0.3s ease;
 }
 
-.services__top--info-order-on img:hover {
+.services__top-info-order-on img:hover {
 	transform: scale(1.1);
 }
-.services__top--info-descktop {
+.services__top-info-descktop {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.services__top--nav {
+.services__top-nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -144,11 +152,11 @@ a:hover {
 	padding-bottom: 20px;
 }
 
-.services__top--nav-list {
+.services__top-nav-list {
 	max-width: max-content;
 	margin-left: 20px;
 }
-.services__top--nav-list a {
+.services__top-nav-list a {
 	white-space: nowrap; /* Запрещаем перенос текста */
 }
 
@@ -160,26 +168,26 @@ a:hover {
 	align-items: center;
 }
 
-.services__description--text {
+.services__description-text {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
 }
 
-.services__description--text-item2 {
+.services__description-text-item2 {
 	display: block;
 	margin-top: 15px;
 }
 
-.services__description--text a {
+.services__description-text button {
 	display: block;
 	position: relative;
 	margin-left: 22px;
 	margin-top: 30px;
 	margin-bottom: 20px;
 }
-.services__description--text a::before {
+.services__description-text button::before {
 	content: '';
 	position: absolute;
 	display: block;
@@ -196,14 +204,11 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-	.menu {
-		display: block;
-	}
 	.services__description {
 		flex-direction: column;
 	}
 
-	.services__description--text-item2 {
+	.services__description-text-item2 {
 		display: block;
 		height: 45px;
 		overflow: hidden;
@@ -211,7 +216,7 @@ a:hover {
 }
 
 @media (max-width: 1000px) {
-	.services__top--info-wrrap {
+	.services__top-info-wrrap {
 		display: none;
 	}
 }
@@ -219,17 +224,17 @@ a:hover {
 	.menu {
 		display: none;
 	}
-	.services__top--nav {
+	.services__top-nav {
 		justify-content: flex-start;
 		flex-wrap: wrap;
 	}
-	.services__top--info-wrrap {
+	.services__top-info-wrrap {
 		display: flex;
 	}
-	.services__description--text {
+	.services__description-text {
 		max-width: 550px;
 	}
-	.services__description--text-item2 {
+	.services__description-text-item2 {
 		height: auto;
 		overflow: auto;
 	}
