@@ -1,0 +1,118 @@
+@font-face {
+	font-family: 'TTLakes';
+	src: url('../../../src/fonts/TTLakes/TTLakes-Regular.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	ffont-family: 'TTLakes';
+}
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: start;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul li {
+	list-style: none;
+}
+.header {
+	max-width: 320px;
+	padding: 10px;
+	height: 100vh;
+	box-shadow: 0 60px 20px rgb(98, 97, 97);
+}
+.header__top--left img {
+	display: block;
+	margin-right: 10px;
+}
+
+.header__top,
+.header__top--left {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header__top {
+	padding-top: 10px;
+}
+.header__menu {
+	margin-top: 30px;
+}
+
+.header__menu--lits {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: start;
+	padding-top: 20px;
+	gap: 30px;
+	color: #1b1c21;
+}
+
+.header__menu--item a {
+	position: relative;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	margin-left: 10px;
+}
+.header__menu--item a::before {
+	position: absolute;
+	content: '';
+	display: block;
+	top: -5px;
+	left: -14px;
+	width: 4px;
+	height: 32px;
+	margin-right: 20px;
+	transition: all 0.3s ease;
+}
+.header__menu--item a:hover::before {
+	background-color: #41f6d7;
+}
+.header__menu--item a:hover {
+	color: #7e7e82;
+}
+
+.header__footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: start;
+}
+.header__footer--icon {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.header__footer--icon img {
+	margin-right: 15px;
+}
+.header__footer--phone {
+	padding-top: 20px;
+}
+.header__footer--phone span {
+	font-size: 24px;
+	color: #1b1c21;
+}
+.header__footer--lang--lists {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 15px;
+	padding-top: 40px;
+}
+
+.header__footer--lang--lists li a {
+	transition: all 0.3s ease;
+	color: #1b1c21;
+}
+.header__footer--lang--lists li a:hover {
+	color: #7e7e82;
+}
