@@ -8,7 +8,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	ffont-family: 'TTLakes';
+	font-family: 'TTLakes';
 }
 .header {
 	display: flex;
@@ -23,11 +23,16 @@ a {
 ul li {
 	list-style: none;
 }
+button {
+	border: none;
+	outline: none;
+	background-color: inherit;
+}
 .header {
 	max-width: 320px;
 	padding: 10px;
 	height: 100vh;
-	box-shadow: 0 60px 20px rgb(98, 97, 97);
+	box-shadow: 40px 0px 20px rgb(98, 97, 97);
 }
 .header__top--left img {
 	display: block;
@@ -97,9 +102,13 @@ ul li {
 .header__footer--phone {
 	padding-top: 20px;
 }
-.header__footer--phone span {
+.header__footer--phone a {
 	font-size: 24px;
 	color: #1b1c21;
+	transition: all 0.3s ease;
+}
+.header__footer--phone a:hover {
+	color: #ff3e79;
 }
 .header__footer--lang--lists {
 	display: flex;
