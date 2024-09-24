@@ -1,0 +1,68 @@
+@font-face {
+	font-family: 'TTLakes';
+	src: url('../../../src/fonts/TTLakes/TTLakes-Regular.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+* {
+	font-family: 'TTLakes';
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.repair__desc {
+	padding: 20px 30px;
+	font-size: 16px;
+	color: #7e7e82;
+	background-color: #fff;
+}
+
+.repair__lists-hidden {
+	max-height: 200px;
+	overflow-y: hidden;
+}
+.repair__lists {
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding-left: 30px;
+	padding-top: 30px;
+	background-color: #f8f8f8;
+}
+
+.repair__btn-open,
+.repair__btn-close {
+	position: relative;
+	outline: none;
+	border: none;
+	background-color: inherit;
+	padding: 10px;
+	margin-left: 30px;
+	margin-top: 40px;
+	color: black;
+	font-size: 16px;
+}
+.repair__btn-open::before {
+	content: '';
+	position: absolute;
+	left: -8px;
+	top: 15px;
+	width: 8px;
+	height: 10px;
+	background-image: url('../img/icon.svg');
+	background-size: contain;
+}
+.btn-hidden {
+	display: none;
+}
+.repair__btn-close::before {
+	content: '';
+	position: absolute;
+	left: -8px;
+	top: 15px;
+	width: 8px;
+	height: 10px;
+	background-image: url('../img/icon-close.svg');
+	background-size: contain;
+}
