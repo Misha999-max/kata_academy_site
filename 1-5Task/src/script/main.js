@@ -13,3 +13,13 @@ btnClose.addEventListener('click', () => {
 	btnOpen.classList.remove('btn-hidden')
 	btnClose.classList.add('btn-hidden')
 })
+
+// SLICK SLAIDER
+
+$('.slick-carousel').slick({
+	dots: true,
+	infinite: true,
+	speed: 500,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+})
