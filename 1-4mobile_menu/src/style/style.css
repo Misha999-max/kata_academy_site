@@ -144,7 +144,7 @@ ul li {
 	margin-left: 10px;
 	color: #ff3e79;
 }
-.header-footer__langs {
+.header-footer-langs {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -152,10 +152,10 @@ ul li {
 	padding-top: 40px;
 }
 
-.header-footer__langs-link {
+.header-footer-langs__link {
 	transition: all 0.3s ease;
 	color: #1b1c21;
 }
-.header-footer__langs-link--active {
+.header-footer-langs__link-active {
 	color: #7e7e82;
 }
