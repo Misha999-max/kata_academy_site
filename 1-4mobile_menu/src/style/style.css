@@ -109,22 +109,23 @@ ul li {
 	justify-content: space-between;
 	align-items: start;
 }
-.header-footer__icon {
+.header-footer-icon {
 	display: flex;
 	align-items: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
-.header-footer__info a {
+.header-footer-info .header-footer-info__phone,
+.header-footer-info .header-footer-info__mail {
 	display: inline-block;
 }
-.header-footer__info {
+.header-footer-info {
 	display: flex;
 	flex-direction: column;
 	font-style: normal;
 }
-.header-footer__info-phone {
+.header-footer-info__phone {
 	padding-top: 20px;
 	font-size: 24px;
 	font-weight: 800;
@@ -132,15 +133,15 @@ ul li {
 	transition: all 0.3s ease;
 }
 
-.header-footer__info-phone:hover {
+.header-footer-info__phone:hover {
 	margin-left: 10px;
 	color: #ff3e79;
 }
-.header-footer__info-mail {
+.header-footer-info__mail {
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
-.header-footer__info-mail:hover {
+.header-footer-info__mail:hover {
 	margin-left: 10px;
 	color: #ff3e79;
 }
