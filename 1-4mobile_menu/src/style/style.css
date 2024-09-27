@@ -50,7 +50,7 @@ ul li {
 	max-width: 320px;
 	padding: 10px;
 	height: 100vh;
-	box-shadow: 40px 0px 20px rgb(98, 97, 97);
+	box-shadow: 10px 0px 20px rgba(98, 97, 97, 0.6);
 }
 .header__top-left .img {
 	display: block;

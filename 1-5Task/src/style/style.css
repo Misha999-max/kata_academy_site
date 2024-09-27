@@ -74,5 +74,18 @@
 @media (max-width: 400px) {
 	.slick-carousel {
 		display: block !important;
+		margin: 20px auto;
+	}
+	.mobile-slider-hidden {
+		margin-left: 40px;
+	}
+	.repair__lists {
+		display: none;
+	}
+	.repair__btn-open {
+		display: none;
+	}
+	.repair__btn-close {
+		display: none;
 	}
 }

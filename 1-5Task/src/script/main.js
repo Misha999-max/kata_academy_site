@@ -19,6 +19,7 @@ btnClose.addEventListener('click', () => {
 $('.slick-carousel').slick({
 	dots: true,
 	infinite: true,
+	centerPadding: '30px',
 	speed: 500,
 	slidesToShow: 1,
 	slidesToScroll: 1,
