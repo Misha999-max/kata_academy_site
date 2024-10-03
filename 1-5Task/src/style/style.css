@@ -53,9 +53,7 @@
 	background-image: url('../img/icon.svg');
 	background-size: contain;
 }
-.btn-hidden {
-	display: none;
-}
+
 .repair__btn-close::before {
 	content: '';
 	position: absolute;
