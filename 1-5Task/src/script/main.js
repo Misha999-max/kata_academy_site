@@ -1,5 +1,4 @@
 const btnOpen = document.querySelector('.repair__btn-open'),
-	// btnClose = document.querySelector('.repair__btn-close'),
 	hiddenContent = document.querySelector('.repair__lists')
 
 btnOpen.addEventListener('click', () => {
@@ -14,19 +13,51 @@ btnOpen.addEventListener('click', () => {
 	}
 })
 
-// btnClose.addEventListener('click', () => {
-
-// 	btnOpen.classList.remove('btn-hidden')
-// 	btnClose.classList.add('btn-hidden')
-// })
-
 // SLICK SLAIDER
 
-$('.slick-carousel').slick({
-	dots: true,
-	infinite: true,
-	centerPadding: '30px',
-	speed: 500,
-	slidesToShow: 1,
-	slidesToScroll: 1,
+window.addEventListener('resize', () => {
+	console.log(document.documentElement.clientWidth)
+
+	if (document.documentElement.clientWidth < 760) {
+		hiddenContent.classList.add('slick-carousel')
+
+		$('.slick-carousel').slick({
+			dots: true,
+			infinite: true,
+			centerPadding: '30px',
+			speed: 500,
+			slidesToShow: 3,
+			slidesToScroll: 3,
+			responsive: [
+				{
+					breakpoint: 760,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+					},
+				},
+				{
+					breakpoint: 560,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2,
+					},
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+					},
+				},
+			],
+		})
+	}
+
+	if (document.documentElement.clientWidth > 760) {
+		hiddenContent.classList.remove('slick-carousel')
+		hiddenContent.classList.remove('slick-slider')
+		hiddenContent.classList.remove('slick-initialized')
+		hiddenContent.classList.remove('slick-dotted')
+	}
 })
